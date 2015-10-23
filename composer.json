@@ -1,0 +1,8 @@
+{
+    "name": "netbrothers-gmbh/yii-lib-basic",
+    "autoload": {
+        "psr-0" : {
+            "NB\\Yii" : "src"
+        }
+    }
+}
