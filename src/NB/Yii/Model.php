@@ -2,7 +2,7 @@
 
 namespace NB\Yii;
 
-use NB\IDebuggable;
+use NB\Yii\IDebuggable;
 
 /**
  * Abstract base model with some convenience features.
