@@ -2,7 +2,6 @@
 
 namespace NB\Yii;
 
-use NB\Yii\IDebuggable;
 use Yii;
 use yii\web\Controller as YiiWebController;
 
@@ -12,7 +11,7 @@ use yii\web\Controller as YiiWebController;
  * @author Thilo Ratnaweera <thilo.ratnaweera@netbrothers.de>
  * @license http://www.gnu.org/licenses/lgpl-3.0.txt LGPLv3
  */
-abstract class Controller extends YiiWebController implements IDebuggable
+abstract class Controller extends YiiWebController
 {
     abstract protected function getLoggingCategory();
 
