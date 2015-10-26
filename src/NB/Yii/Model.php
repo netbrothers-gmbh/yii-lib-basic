@@ -2,6 +2,8 @@
 
 namespace NB\Yii;
 
+use Yii; // Yii framework has to be in the include path for this to work.
+
 /**
  * Abstract base model with some convenience features.
  *
