@@ -2,9 +2,8 @@
 
 namespace NB\Yii;
 
-//use Yii;
-use yii\web\Controller as YiiWebController;
 use NB\Yii\Traits\DebuggingTrait;
+use yii\web\Controller as YiiWebController;
 
 /**
  * Abstract base controller with some convenience features.

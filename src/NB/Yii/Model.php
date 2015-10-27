@@ -2,7 +2,7 @@
 
 namespace NB\Yii;
 
-use Yii; // Yii framework has to be in the include path for this to work.
+use NB\Yii\Traits\DebuggingTrait;
 
 /**
  * Abstract base model with some convenience features.
@@ -14,43 +14,5 @@ abstract class Model
 {
     abstract protected function getLoggingCategory();
 
-    /**
-     * Logs an error message.
-     *
-     * @param string $message The message to log.
-     */
-    protected function error($message)
-    {
-        Yii::error($message, $this->getLoggingCategory());
-    }
-
-    /**
-     * Logs an informative message.
-     *
-     * @param string $message The message to log.
-     */
-    protected function info($message)
-    {
-        Yii::info($message, $this->getLoggingCategory());
-    }
-
-    /**
-     * Logs a debug message.
-     *
-     * @param string $message The message to log.
-     */
-    protected function trace($message)
-    {
-        Yii::trace($message, $this->getLoggingCategory());
-    }
-
-    /**
-     * Logs an warning message.
-     *
-     * @param string $message The message to log.
-     */
-    protected function warning($message)
-    {
-        Yii::warning($message, $this->getLoggingCategory());
-    }
+    use DebuggingTrait;
 }

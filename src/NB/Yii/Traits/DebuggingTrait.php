@@ -2,6 +2,9 @@
 
 namespace NB\Yii\Traits;
 
+/*
+ * Note: The Yii framework has to be in the include path.
+ */
 use Yii;
 
 /**
