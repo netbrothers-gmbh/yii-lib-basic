@@ -1,6 +1,6 @@
 <?php
 
-namespace NB\Yii;
+namespace NB\Yii\console;
 
 use NB\Yii\Traits\DebuggingTrait;
 use yii\console\Controller as YiiConsoleController;
