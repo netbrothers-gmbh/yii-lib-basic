@@ -37,7 +37,6 @@ abstract class Controller extends YiiWebController
             return microtime(TRUE) - $this->actionStartTime;
         }
         return round((microtime(TRUE) - $this->actionStartTime), 3);
-
     }
 
     /**
