@@ -26,11 +26,18 @@ abstract class Controller extends YiiWebController
     }
 
     /**
+     * Calculates the current action runtime rounded to three decimal places.
+     *
+     * @param boolean $fullPrecision If TRUE will return full precision.
      * @return float The runtime of the current action.
      */
-    protected function getActionRuntime()
+    protected function getActionRuntime($fullPrecision = FALSE)
     {
-        return microtime(TRUE) - $this->actionStartTime;
+        if ($fullPrecision) {
+            return microtime(TRUE) - $this->actionStartTime;
+        }
+        return round((microtime(TRUE) - $this->actionStartTime), 3);
+
     }
 
     /**
