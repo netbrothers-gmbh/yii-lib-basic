@@ -2,7 +2,8 @@
 
 namespace NB\Yii;
 
-use NB\Yii\Traits\DebuggingTrait;
+use NB\Yii\Traits\Debugging as DebuggingTrait;
+use NB\Yii\Traits\Measure as MeasureTrait;
 use yii\base\Component as YiiBaseComponent;
 
 /**
@@ -23,4 +24,5 @@ abstract class Component extends YiiBaseComponent
     abstract protected function getLoggingCategory();
 
     use DebuggingTrait;
+    use MeasureTrait;
 }

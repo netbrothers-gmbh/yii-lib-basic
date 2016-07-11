@@ -2,7 +2,8 @@
 
 namespace NB\Yii\console;
 
-use NB\Yii\Traits\DebuggingTrait;
+use NB\Yii\Traits\Debugging as DebuggingTrait;
+use NB\Yii\Traits\Measure as MeasureTrait;
 use yii\console\Controller as YiiConsoleController;
 
 /**
@@ -43,4 +44,5 @@ abstract class Controller extends YiiConsoleController
     abstract protected function getLoggingCategory();
 
     use DebuggingTrait;
+    use MeasureTrait;
 }

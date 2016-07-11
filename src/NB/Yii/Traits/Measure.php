@@ -8,7 +8,7 @@ namespace NB\Yii\Traits;
  * @author Thilo Ratnaweera <thilo.ratnaweera@netbrothers.de>
  * @license http://www.gnu.org/licenses/lgpl-3.0.txt LGPLv3
  */
-trait MeasureTrait
+trait Measure
 {
     /**
      * @var float Will be set with the current microtime.
