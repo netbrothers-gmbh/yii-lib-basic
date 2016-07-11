@@ -14,6 +14,26 @@ use yii\web\Controller as YiiWebController;
 abstract class Controller extends YiiWebController
 {
     /**
+     *
+     * @var float Will be set with the microtime before the action is called.
+     */
+    protected $actionStartTime;
+
+    public function beforeAction($action)
+    {
+        $this->actionStartTime = microtime(TRUE);
+        return parent::beforeAction($action);
+    }
+
+    /**
+     * @return float The runtime of the current action.
+     */
+    protected function getActionRuntime()
+    {
+        return microtime(TRUE) - $this->actionStartTime;
+    }
+    
+    /**
      * Specifies a dynamic logging category for the impementing class. It may
      * choose to return an identifier based on the class and/or the executed
      * function.
