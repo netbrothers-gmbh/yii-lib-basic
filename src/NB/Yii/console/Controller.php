@@ -26,6 +26,14 @@ abstract class Controller extends YiiConsoleController
     }
 
     /**
+     * @return float The runtime of the current action.
+     */
+    protected function getActionRuntime()
+    {
+        return microtime(TRUE) - $this->actionStartTime;
+    }
+
+    /**
      * Specifies a dynamic logging category for the impementing class. It may
      * choose to return an identifier based on the class and/or the executed
      * function.
