@@ -17,11 +17,11 @@ abstract class Controller extends YiiConsoleController
      *
      * @var float Will be set with the microtime before the action is called.
      */
-    protected $actionStarttime;
+    protected $actionStartTime;
 
     public function beforeAction($action)
     {
-        $this->actionStarttime = microtime(TRUE);
+        $this->actionStartTime = microtime(TRUE);
         return parent::beforeAction($action);
     }
 
