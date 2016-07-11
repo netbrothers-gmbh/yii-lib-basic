@@ -14,6 +14,18 @@ use yii\console\Controller as YiiConsoleController;
 abstract class Controller extends YiiConsoleController
 {
     /**
+     *
+     * @var float Will be set with the microtime before the action is called.
+     */
+    protected $actionStarttime;
+
+    public function beforeAction($action)
+    {
+        $this->actionStarttime = microtime(TRUE);
+        return parent::beforeAction($action);
+    }
+
+    /**
      * Specifies a dynamic logging category for the impementing class. It may
      * choose to return an identifier based on the class and/or the executed
      * function.
