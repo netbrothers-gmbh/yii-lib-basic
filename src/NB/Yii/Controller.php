@@ -3,6 +3,7 @@
 namespace NB\Yii;
 
 use NB\Yii\Traits\DebuggingTrait;
+use NB\Yii\Traits\MeasureTrait;
 use yii\web\Controller as YiiWebController;
 
 /**
@@ -14,7 +15,6 @@ use yii\web\Controller as YiiWebController;
 abstract class Controller extends YiiWebController
 {
     /**
-     *
      * @var float Will be set with the microtime before the action is called.
      */
     protected $actionStartTime;
@@ -32,7 +32,7 @@ abstract class Controller extends YiiWebController
     {
         return microtime(TRUE) - $this->actionStartTime;
     }
-    
+
     /**
      * Specifies a dynamic logging category for the impementing class. It may
      * choose to return an identifier based on the class and/or the executed
@@ -43,4 +43,5 @@ abstract class Controller extends YiiWebController
     abstract protected function getLoggingCategory();
 
     use DebuggingTrait;
+    use MeasureTrait;
 }
