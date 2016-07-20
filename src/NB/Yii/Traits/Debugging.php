@@ -54,4 +54,16 @@ trait Debugging
     {
         Yii::warning($message, $this->getLoggingCategory());
     }
+
+    /**
+     * Specifies a dynamic logging category for the impementing class. By
+     * overwriting you may choose to return an individual identifier, e.g. based
+     * on the class and/or the executed function name.
+     *
+     * @return string The logging category.
+     */
+    protected function getLoggingCategory()
+    {
+        return get_class($this);
+    }
 }

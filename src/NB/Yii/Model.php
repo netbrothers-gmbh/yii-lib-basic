@@ -2,8 +2,8 @@
 
 namespace NB\Yii;
 
-use NB\Yii\Traits\Debugging as DebuggingTrait;
-use NB\Yii\Traits\Measure as MeasureTrait;
+use NB\Yii\Traits\Debugging;
+use NB\Yii\Traits\Measuring;
 
 /**
  * Abstract base model with some convenience features.
@@ -13,15 +13,6 @@ use NB\Yii\Traits\Measure as MeasureTrait;
  */
 abstract class Model
 {
-    /**
-     * Specifies a dynamic logging category for the impementing class. It may
-     * choose to return an identifier based on the class and/or the executed
-     * function.
-     *
-     * @return string The logging category.
-     */
-    abstract protected function getLoggingCategory();
-
-    use DebuggingTrait;
-    use MeasureTrait;
+    use Debugging;
+    use Measuring;
 }

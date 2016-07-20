@@ -2,8 +2,8 @@
 
 namespace NB\Yii\console;
 
-use NB\Yii\Traits\Debugging as DebuggingTrait;
-use NB\Yii\Traits\Measure as MeasureTrait;
+use NB\Yii\Traits\Debugging;
+use NB\Yii\Traits\Measuring;
 use yii\console\Controller as YiiConsoleController;
 
 /**
@@ -40,15 +40,6 @@ abstract class Controller extends YiiConsoleController
         return round((microtime(TRUE) - $this->actionStartTime), 3);
     }
 
-    /**
-     * Specifies a dynamic logging category for the impementing class. It may
-     * choose to return an identifier based on the class and/or the executed
-     * function.
-     *
-     * @return string The logging category.
-     */
-    abstract protected function getLoggingCategory();
-
-    use DebuggingTrait;
-    use MeasureTrait;
+    use Debugging;
+    use Measuring;
 }
