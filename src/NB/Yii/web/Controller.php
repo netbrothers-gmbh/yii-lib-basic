@@ -1,8 +1,8 @@
 <?php
 
-namespace NB\Yii;
+namespace NB\Yii\web;
 
-use NB\Yii\Traits\Debugging;
+use NB\Yii\web\Traits\Debugging;
 use NB\Yii\Traits\Measuring;
 use yii\web\Controller as YiiWebController;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace NB\Yii\Traits;
+namespace NB\Yii\web\Traits;
 
 /*
  * Note: The Yii framework has to be in the include path.
