@@ -13,6 +13,18 @@ use yii\helpers\Console;
 trait Debugging
 {
     /**
+     * Prints an error message to stderr.
+     *
+     * @param string $message The message to log.
+     */
+    protected function error($message)
+    {
+        $this->stderr(
+            $this->getConsoleOutputPattern($message),
+            Console::FG_RED
+        );
+    }
+    /**
      * @param string $message The message to be sent to stdout or stderr.
      * @return string A formatted one line string containing the message.
      */
@@ -34,20 +46,7 @@ trait Debugging
     }
 
     /**
-     * Logs an error message.
-     *
-     * @param string $message The message to log.
-     */
-    protected function error($message)
-    {
-        $this->stderr(
-            $this->getConsoleOutputPattern($message),
-            Console::FG_RED
-        );
-    }
-
-    /**
-     * Logs an informative message.
+     * Prints an informative message to stdout.
      *
      * @param string $message The message to log.
      */
@@ -60,7 +59,20 @@ trait Debugging
     }
 
     /**
-     * Logs a debug message.
+     * Prints a success message to stdout.
+     *
+     * @param string $message The message to log.
+     */
+    protected function success($message)
+    {
+        $this->stdout(
+            $this->getConsoleOutputPattern($message),
+            Console::FG_GREEN
+        );
+    }
+
+    /**
+     * Prints a debug message to stdout.
      *
      * @param string $message The message to log.
      */
@@ -70,7 +82,7 @@ trait Debugging
     }
 
     /**
-     * Logs an warning message.
+     * Prints a warning message to stdout.
      *
      * @param string $message The message to log.
      */
