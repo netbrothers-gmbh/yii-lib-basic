@@ -55,7 +55,7 @@ trait Debugging
     {
         $this->stdout(
             $this->getConsoleOutputPattern($message),
-            Console::FG_BLUE
+            Console::FG_CYAN
         );
     }
 
