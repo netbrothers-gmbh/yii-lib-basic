@@ -11,6 +11,12 @@ use yii\console\Controller as YiiConsoleController;
  *
  * @author Thilo Ratnaweera <thilo.ratnaweera@netbrothers.de>
  * @license http://www.gnu.org/licenses/lgpl-3.0.txt LGPLv3
+ * @method void error(string $message) Outputs an error message.
+ * @method void info(string $message) Outputs an informative message.
+ * @method void trace(string $message) Outputs a debug message.
+ * @method void warning(string $message) Outputs a warning message.
+ * @method void measureStart() Starts the stop watch.
+ * @method float timeElapsed(boolean $fullPrecision) The elapsed time since the start of the stop watch.
  */
 abstract class Controller extends YiiConsoleController
 {
