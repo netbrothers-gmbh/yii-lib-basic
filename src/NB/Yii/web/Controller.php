@@ -11,11 +11,11 @@ use yii\web\Controller as YiiWebController;
  *
  * @author Thilo Ratnaweera <thilo.ratnaweera@netbrothers.de>
  * @license http://www.gnu.org/licenses/lgpl-3.0.txt LGPLv3
- * @method void error(string $message) Logs an error message.
- * @method void info(string $message) Logs an informative message.
- * @method void trace(string $message) Logs a debug message.
- * @method void warning(string $message) Logs a warning message.
- * @method void measureStart() Starts the stop watch.
+ * @method null error(string $message) Logs an error message.
+ * @method null info(string $message) Logs an informative message.
+ * @method null trace(string $message) Logs a debug message.
+ * @method null warning(string $message) Logs a warning message.
+ * @method null measureStart() Starts the stop watch.
  * @method float timeElapsed(boolean $fullPrecision) The elapsed time since the start of the stop watch.
  */
 abstract class Controller extends YiiWebController
