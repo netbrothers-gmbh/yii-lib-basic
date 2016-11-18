@@ -3,6 +3,7 @@
 namespace NB\Yii\console\Traits;
 
 use yii\helpers\Console;
+use Yii;
 
 /**
  * Trait to provide convenient logging/debugging methods.
@@ -19,7 +20,7 @@ trait Debugging
      */
     protected function error($message)
     {
-        $this->stderr(
+        Yii::$app->controller->stderr(
             $this->getConsoleOutputPattern($message),
             Console::FG_RED
         );
@@ -52,7 +53,7 @@ trait Debugging
      */
     protected function info($message)
     {
-        $this->stdout(
+        Yii::$app->controller->stdout(
             $this->getConsoleOutputPattern($message),
             Console::FG_CYAN
         );
@@ -65,7 +66,7 @@ trait Debugging
      */
     protected function success($message)
     {
-        $this->stdout(
+        Yii::$app->controller->stdout(
             $this->getConsoleOutputPattern($message),
             Console::FG_GREEN
         );
@@ -78,7 +79,7 @@ trait Debugging
      */
     protected function trace($message)
     {
-        $this->stdout($this->getConsoleOutputPattern($message));
+        Yii::$app->controller->stdout($this->getConsoleOutputPattern($message));
     }
 
     /**
@@ -88,7 +89,7 @@ trait Debugging
      */
     protected function warning($message)
     {
-        $this->stdout(
+        Yii::$app->controller->stdout(
             $this->getConsoleOutputPattern($message),
             Console::FG_YELLOW
         );
