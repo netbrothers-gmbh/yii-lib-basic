@@ -25,13 +25,16 @@ trait Debugging
             Console::FG_RED
         );
     }
+
     /**
      * @param string $message The message to be sent to stdout or stderr.
      * @return string A formatted one line string containing the message.
      */
     protected function getConsoleOutputPattern($message)
     {
-        return '[' . date('Y-m-d H:i:s') . '] ' . $message . "\n";
+        return sprintf(
+            "[%s] (%s) %s\n", date('Y-m-d H:i:s'), getmypid(), $message
+        );
     }
 
     /**
