@@ -2,8 +2,8 @@
 
 namespace NB\Yii\grid;
 
-use yii\grid\DataColumn;
-use yii\helpers\ArrayHelper;
+use \yii\grid\DataColumn;
+use \yii\helpers\ArrayHelper;
 
 /**
  * A data column to show a human readable representation of number values.

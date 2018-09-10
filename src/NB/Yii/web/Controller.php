@@ -2,9 +2,9 @@
 
 namespace NB\Yii\web;
 
-use NB\Yii\web\Traits\Debugging;
-use NB\Yii\Traits\Measuring;
-use yii\web\Controller as YiiWebController;
+use \NB\Yii\web\Traits\Debugging;
+use \NB\Yii\Traits\Measuring;
+use \yii\web\Controller as YiiWebController;
 
 /**
  * Abstract base controller with some convenience features.

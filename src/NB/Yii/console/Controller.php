@@ -2,9 +2,9 @@
 
 namespace NB\Yii\console;
 
-use NB\Yii\console\Traits\Debugging;
-use NB\Yii\Traits\Measuring;
-use yii\console\Controller as YiiConsoleController;
+use \NB\Yii\console\Traits\Debugging;
+use \NB\Yii\Traits\Measuring;
+use \yii\console\Controller as YiiConsoleController;
 
 /**
  * Abstract base console controller with some convenience features.
