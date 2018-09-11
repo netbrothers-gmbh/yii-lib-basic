@@ -2,8 +2,8 @@
 
 namespace NB\Yii\console\Traits;
 
-use yii\helpers\Console;
-use Yii;
+use \yii\helpers\Console;
+use \Yii;
 
 /**
  * Trait to provide convenient logging/debugging methods.

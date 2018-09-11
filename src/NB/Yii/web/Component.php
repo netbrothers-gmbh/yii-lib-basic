@@ -2,9 +2,9 @@
 
 namespace NB\Yii\web;
 
-use NB\Yii\web\Traits\Debugging;
-use NB\Yii\Traits\Measuring;
-use yii\base\Component as YiiBaseComponent;
+use \NB\Yii\web\Traits\Debugging;
+use \NB\Yii\Traits\Measuring;
+use \yii\base\Component as YiiBaseComponent;
 
 /**
  * Abstract web component with some convenience features.
